@@ -1,0 +1,19 @@
+{
+  "name": "higher-order-from-scratch",
+  "version": "1.0.0",
+  "description": "Higher Order From Scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forrestmorrison/Higher-Order-From-Scratch.git"
+  },
+  "author": "Forrest Morrison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forrestmorrison/Higher-Order-From-Scratch/issues"
+  },
+  "homepage": "https://github.com/forrestmorrison/Higher-Order-From-Scratch#readme"
+}
