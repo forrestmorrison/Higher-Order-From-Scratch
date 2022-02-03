@@ -3,10 +3,11 @@
 // input = (numbers, myFunction)
 // expected output = [650, 440, 120, 40]
 
+// iterate userArray
+// apply function
+// return copy of user inputted array
+
 function myMap(myArray, myFunction) {
-    // iterate userArray
-    // apply function
-    // return copy of user inputted array
 
     let mappedArray = [];
 
@@ -28,7 +29,7 @@ console.log(myMap(numbers, timesTen));
 
 
 
-// .reduce() - takes an array of food orders with their amounts and returns the total amount of all the food orders.
+// .reduce() - takes an array of food orders with their amounts and returns the total amount of all the food orders
 
 // const array1 = [1, 2, 3, 4];
 // const reducer = (previousValue, currentValue) => previousValue + currentValue;
@@ -54,4 +55,59 @@ const foodOrders = [5, 10, 20, 40];
 
 console.log(myReduce(foodOrders));
 
-// .filter()
+// .filter() - takes an array of items and a function that returns an array with only the items that return true in the function.
+
+
+const products = [
+    { name: 'Laptop', price: 32000, brand: 'Lenovo', color: 'Silver' },
+    { name: 'Phone', price: 700, brand: 'Iphone', color: 'Golden' },
+    { name: 'Watch', price: 3000, brand: 'Casio', color: 'Yellow' },
+    { name: 'Aunglass', price: 300, brand: 'Ribon', color: 'Blue' },
+    { name: 'Camera', price: 9000, brand: 'Lenovo', color: 'Gray' },
+];
+
+// Get products that price is greater than 3000 by using a filter
+
+const getProduct = products.filter(product => product.price > 3000);
+
+// Expected output:
+
+// [
+//     { name: 'Laptop', price: 32000, brand: 'Lenovo', color: 'Silver' },
+//     { name: 'Camera', price: 9000, brand: 'Lenovo', color: 'Gray' }
+// ];
+
+
+// function myFilter(theArray, theFunction()) {    
+//     const filterArr = []; 
+    
+// for(let i=0; i<theArray.length; i++) {        
+//     const result = theFunction(theArray[i], i, theArray); 
+//     }      
+      
+//     if(result) {
+//         filterArr.push(theArray[i]); 
+//     }  
+
+//     return filterArr;
+// }
+
+// console.log(myFilter(products, getProduct));
+
+
+// filter takes an array and function as argument
+
+function theFilter(arr, filterFunc) {    
+    const filterArr = []; 
+    // empty array        
+    // loop though array    
+    for(let i=0;i<arr.length;i++) {        
+        const result = filterFunc(arr[i], i, arr);       
+         // push the current element if result is true        
+         if(result)             
+         filterArr.push(arr[i]);     
+        }    
+         return filterArr;
+    }
+
+console.log(theFilter(products, getProduct));
